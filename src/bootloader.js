@@ -27,6 +27,7 @@ export default class Bootloader extends Phaser.Scene{
         this.load.bitmapFont("arcade", "assets/fonts/arcade.png", "assets/fonts/arcade.xml");
         //this.load.image('background', 'assets/images/background.jpg');
         this.load.audio('splash', 'assets/sounds/splash.mp3');
+        this.load.audio('click', 'assets/sounds/click.mp3');
         //this.load.spritesheet('player', 'assets/images/player.png', { frameWidth: 32, frameHight: 32 })
        // this.load.image("enemy", "assets/images/enemy.png");
              this.load.image("bricks", "assets/maps/bricks.png");

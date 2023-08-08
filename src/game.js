@@ -26,6 +26,17 @@ export default class Game extends Phaser.Scene {
     increment(){
         this.counter++
         this.counterText.setText(this.counter)
+        this.sound.add('click').play()
+        if (this.counter === 10) {
+        this.flashMessage = this.add.bitmapText(200,300, "arcade",'iaaa', 30).setOrigin(0.5)
+        this.tweens.add({
+            targets: this.flashMessage,
+            alpha: { from: 1, to: 0 },
+            duration: 5000,
+            onComplete: () => { this.flashMessage.destroy() }
+          })
+        }
+        
     }
 }
 //petxi
